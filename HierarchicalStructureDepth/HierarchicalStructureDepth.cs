@@ -6,28 +6,29 @@
 
     //Calculate randomly generated Hierarchical strucutre depth
     public class HierarchicalStructureDepth {
-        const int DEPTH = 5;        //Node tree depth
+        const int DEPTH = 15;        //Node tree depth
         const int MAX_CHILDREN = 3; //Max chidlren per node
         int depth = 0,level = 0;      
         public void Start() {
-            Branch branch = GenerateBranch();
+            Branch branch = GenerateStructure();
             depth = 0;
-            FindDepth(branch);
-            Console.WriteLine(depth);
+            FindStructureDepth(branch);
+            Console.WriteLine("Depth of the given structure is: " + depth.ToString());
+            Console.WriteLine("\n\nPress any key to exit");
+            Console.ReadKey();
         }
-        public void FindDepth(Branch recursiveBranch) {
+        public void FindStructureDepth(Branch recursiveBranch) {
             level++;
             if (level > depth) {
                 depth = level;
             }
             foreach (Branch branch in recursiveBranch.branches) {
-                FindDepth(branch);
+                FindStructureDepth(branch);
             }
             level--;
             return;
         }
-
-        public Branch GenerateBranch() {
+        public Branch GenerateStructure() {
             Branch branch = new Branch();
             if (depth < DEPTH - 1) {
                 depth++;
@@ -35,7 +36,7 @@
                 int children = random.Next(1, MAX_CHILDREN);
                 
                 for (int i = 0; i < children; i++) {
-                    branch.branches.Add(GenerateBranch());
+                    branch.branches.Add(GenerateStructure());
                 }
                 depth--;
             }

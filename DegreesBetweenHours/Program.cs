@@ -2,7 +2,8 @@
 {
     internal class Program {
         static void Main(string[] args) {
-            AnalogueClockHandDifference.Start();
+            while(true)
+                AnalogueClockHandDifference.Start();
         }
     }
 }
