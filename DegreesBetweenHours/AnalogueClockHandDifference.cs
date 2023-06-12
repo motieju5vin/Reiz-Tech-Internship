@@ -1,7 +1,8 @@
 ﻿namespace DegreesBetweenHours {
+    //Calculates the difference between analogue clock hands
     public static class AnalogueClockHandDifference {
-        private const int DEGREES_IN_MINUTE = 360 / 60; //360 degrees in a circle divided into 60 minutes
-        private const int DEGREES_IN_HOUR = 360 / 12; //360 degrees in a circle divided into 12 hours
+        private const int DEGREES_IN_MINUTE = 360 / 60; 
+        private const int DEGREES_IN_HOUR = 360 / 12;
         private static int hours = 0, minutes = 0;
         private static int ValidateAndSplitInput(string time) {
             string minutesString = "", hoursString = "";
@@ -15,8 +16,8 @@
                 Console.WriteLine("Incorrect input, Minutes or hours field was empty");
                 return 1;
             }
-            if (!minutesString.All(char.IsDigit) || !hoursString.All(char.IsDigit)) {
-                Console.WriteLine("Incorrect input, one or both of the inputs weren't digits");
+            if (!int.TryParse(hoursString,out hours) || !int.TryParse(minutesString,out minutes)) {
+                Console.WriteLine("Incorrect input,either one or both of the inputs weren't digits, or the number was too large");
                 return 1;
             }
             minutes = Convert.ToInt32(minutesString);

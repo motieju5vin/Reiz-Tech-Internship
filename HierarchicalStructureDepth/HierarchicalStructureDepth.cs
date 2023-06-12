@@ -1,9 +1,12 @@
 ﻿namespace HierarchicalStructureDepth {
+    
     public class Branch {
         public List<Branch> branches = new List<Branch>();
     }
+
+    //Calculate randomly generated Hierarchical strucutre depth
     public class HierarchicalStructureDepth {
-        const int DEPTH = 7;       //Node tree depth
+        const int DEPTH = 5;        //Node tree depth
         const int MAX_CHILDREN = 3; //Max chidlren per node
         int depth = 0,level = 0;      
         public void Start() {
@@ -23,6 +26,7 @@
             level--;
             return;
         }
+
         public Branch GenerateBranch() {
             Branch branch = new Branch();
             if (depth < DEPTH - 1) {

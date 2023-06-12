@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DegreesBetweenHours", "DegreesBetweenHours\DegreesBetweenHours.csproj", "{91E58571-9781-4711-B1BC-B01EF3B74C3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DegreesBetweenClockHands", "DegreesBetweenHours\DegreesBetweenClockHands.csproj", "{91E58571-9781-4711-B1BC-B01EF3B74C3E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HierarchicalStructureDepth", "HierarchicalStructureDepth\HierarchicalStructureDepth.csproj", "{4ED51DA8-CB97-4095-B183-1C3DBDA0495E}"
 EndProject
